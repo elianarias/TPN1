@@ -102,6 +102,7 @@ int menu(){
             "3.Multiplicacion\n"
             "4.Division\n"
             "5.Factorial\n"
+            "6.Todas las operaciones\n"
             "0.Salir\n"
             "Ingrese una opcion:\n");
     scanf("%d",&opcion);
