@@ -72,6 +72,17 @@ int main(void){
                 men=menu();
 
             }
+             case 6:{
+                leeNumero(&a,&b);
+                s=suma(a,b);
+                printf("suma %d+%d=%d\n",a,b,s);
+                r=resta(a,b);
+                printf("resta %d-%d=%d\n",a,b,r);
+                multiplicacion(a,b,&resultado);
+                printf("multiplicacion %d*%d=%f\n",a,b,resultado);
+                d=division(a,b);
+                printf("division %d:%d=%f\n",a,b,d);
+            }
          default :
                 printf("Opcion incorrecta\n");
                 men=menu();
