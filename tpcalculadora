@@ -66,14 +66,15 @@ int main(void){
             }}
             break;
             case 5:{
-                nrofactor(&a);
-                factorial(a);
-                printf("%d \n",a);
+                printf("Ingrese un valor:\n");
+                scanf("%d",&a);
+                f=factorial(a);
+                printf("%d!=%d\n",a,f);
                 men=menu();
 
             }
              case 6:{
-                leeNumero(&a,&b);
+               leeNumero(&a,&b);
                 s=suma(a,b);
                 printf("suma %d+%d=%d\n",a,b,s);
                 r=resta(a,b);
@@ -82,6 +83,11 @@ int main(void){
                 printf("multiplicacion %d*%d=%f\n",a,b,resultado);
                 d=division(a,b);
                 printf("division %d:%d=%f\n",a,b,d);
+                printf("Ingrese un valor:\n");
+                scanf("%d",&a);
+                f=factorial(a);
+                printf("%d!=%d\n",a,f);
+
             }
          default :
                 printf("Opcion incorrecta\n");
@@ -121,14 +127,7 @@ void leeNumero(int *a,int *b){
     printf("Ingrese otro valor:\n");
     scanf("%d",b);
 }
-/*Funcion ingrese valor a factorial*/
-/**\brief devuelve un valor para la funcion factorial
-  *\return devuelve el valor ingresado por el usuario
-  */
-int nrofactor(int a){
-    printf("Ingrese un valor:\n");
-    scanf("%d",a);
-}
+
 /*Función suma*/
 /**\brief resuelve una suma
   *\param valores ingresados por el usuario
@@ -168,19 +167,8 @@ float division(int a, int b){
     division=(float)a/b;
     return(division);
 }
-//función potencia/
-/**\brief resuelve la potencia de un número
-  *\param valores ingresados por el usuario
-  *\return resultado de la potencia
-  */
-float potencia(int a, int b){
-    float resultado;
-    if(b==0){
-        return(1);
-    }
-    resultado=(float)a*potencia(a,b-1);
-    return(resultado);
-}
+
+
 //funcion factorial/
 /**\brief resuelve un factorial
   *\param valores ingresados por el usuario
