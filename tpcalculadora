@@ -23,7 +23,7 @@ int nrofactor(int a);
 int main(void){
     /*Definición de variables*/
     float resultado,d;
-    int men,s,r,a,b,e,f;
+    int men,s,r,a,b,f;
     men=menu(); //Asigno la opción que devuelve el menú a men
 
     /*La variable men que almacena el valor que devuelve la función menú
