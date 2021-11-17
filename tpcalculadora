@@ -11,8 +11,8 @@ int suma(int a, int b);
 int resta(int a, int b);
 void multiplicacion(int a, int b, float*resultado);
 float division(int a, int b);
-int factorial(int a);
-int nrofactor(int a);
+long int factorial(int a);
+
 
 
 /*Función principal*/
@@ -174,7 +174,7 @@ float division(int a, int b){
   *\param valores ingresados por el usuario
   *\return devuelve el factorial
   */
-int factorial(int a){
+long int factorial(int a){
     int resultado;
     if(a==1){
         return(1);
