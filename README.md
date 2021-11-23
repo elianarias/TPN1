@@ -1,10 +1,9 @@
 # TPN1
 Calculadora
 
-*Integrantes:
--Daniel Escobar 
--Agustin Ariel Di Pinto
+*Integrantes: 
 -Eliana Arias
 -Diego Olmos 
+-Agustin Ariel Di Pinto
 
 ##POR FAVOR AVISAR ANTES DE MODIFICAR EN EL GRUPO##
