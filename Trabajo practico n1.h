@@ -1,43 +1,46 @@
 #ifndef TRABAJO_PRACTICO_N1_H_INCLUDED
 #define TRABAJO_PRACTICO_N1_H_INCLUDED
 
-/*Función menú*/
-/**\brief presenta un menú de opciones
-  *\param se ingresa la opción indicada
-  *\return escanea la opcion y realiza la operación indicada.
+/*FunciÃ³n menÃº*/
+/**\brief presenta un menÃº de opciones
+  *\param se ingresa la opciÃ³n indicada
+  *\return escanea la opcion y realiza la operaciÃ³n indicada.
   */
 int menu(){
     int opcion;
     system("color B1");
-    printf( "1.Suma\n"
-            "2.Resta\n"
-            "3.Multiplicacion\n"
-            "4.Division\n"
-            "5.Factorial\n"
-            "6.Todas las operaciones \n"
-            "0.Salir\n"
-            "Ingrese una opcion:\n");
+    printf( "/////////////////////////////////////////////////\n"
+            "/                1.Suma                         /\n"
+            "/                2.Resta                        /\n"
+            "/                3.Multiplicacion               /\n"
+            "/                4.Division                     /\n"
+            "/                5.Factorial                    /\n"
+            "/                6.Todas las operaciones        /\n"
+            "/                0.Salir                        /\n"
+            "/////////////////////////////////////////////////\n\n"
+            "Ingrese una opcion: ");
 
     scanf("%d",&opcion);
      system("cls");
     return(opcion);
 }
-/*Función que lee los valores con las que se va a operar*/
+/*FunciÃ³n que lee los valores con las que se va a operar*/
 /**\brief lee los valores que se ingresan
   *\param valores ingresados
   *\return retorna los valores escaneado
   */
 void leeNumero(int *a,int *b){
-    printf("Ingrese un valor:\n");
-    /*No se necesita & porque a es una dirección de memoria
+    printf("Ingrese un valor: ");
+    /*No se necesita & porque a es una direcciÃ³n de memoria
      *(*a) que es lo que yo le daba con el ampersan*/
     scanf("%d",a);
-    printf("Ingrese otro valor:\n");
+    printf("\n");
+    printf("Ingrese otro valor: ");
     scanf("%d",b);
 }
 
 
-/*Función suma*/
+/*FunciÃ³n suma*/
 /**\brief resuelve una suma
   *\param valores ingresados por el usuario
   *\return resultado de la suma
@@ -48,7 +51,7 @@ int suma(int a, int b){
     return(suma);
 
 }
-/*Función resta*/
+/*FunciÃ³n resta*/
 /**\brief resuelve una resta
   *\param valores ingresados por el usuario
   *\return resultado de la resta
@@ -58,18 +61,18 @@ int resta(int a, int b){
     resta=a-b;
     return(resta);
 }
-/*Función multiplicación*/
-/**\brief resuelve una multiplicación
+/*FunciÃ³n multiplicaciÃ³n*/
+/**\brief resuelve una multiplicaciÃ³n
   *\param valores ingresados por el usuario
-  *\return resultado de la multiplicación
+  *\return resultado de la multiplicaciÃ³n
   */
 void multiplicacion(int a, int b, float *resultado){
     *resultado=a*b;
 }
-/*Función división*/
-/**\brief resuelve una división
+/*FunciÃ³n divisiÃ³n*/
+/**\brief resuelve una divisiÃ³n
   *\param valores ingresados por el usuario
-  *\return resultado de la división
+  *\return resultado de la divisiÃ³n
   */
 float division(int a, int b){
 
