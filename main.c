@@ -1,11 +1,11 @@
-    /* Calculadora en C*/
+  /* Calculadora en C*/
 
 #include<stdio.h>
 #include<stdlib.h>
 #include<conio.h>
-#include "Trabajo practico n1.h"
+#include "calculadoraagus.h"
 
-/*Definición de funciones*/
+/*DefiniciÃ³n de funciones*/
 
 int menu();
 void leeNumero(int *a,int *b);
@@ -17,22 +17,22 @@ long int factorial(int a);
 
 
 
-/*Función principal*/
-/**\brief muestra un menú donde solicita dos nros
-  *\param determinan los nros que se van a utilizar en la operación
-  *\return retorna el resultado de una operación
+/*FunciÃ³n principal*/
+/**\brief muestra un menÃº donde solicita dos nros
+  *\param determinan los nros que se van a utilizar en la operaciÃ³n
+  *\return retorna el resultado de una operaciÃ³n
   */
 int main(void){
-    /*Definición de variables*/
+    /*DefiniciÃ³n de variables*/
     float resultado,d;
     int men,s,r,a,b,f;
-    men=menu(); //Asigno la opción que devuelve el menú a men
+    men=menu(); //Asigno la opciÃ³n que devuelve el menÃº a men
 
-    /*La variable men que almacena el valor que devuelve la función menú
-      se usa para elegir la constante que determinará el caso que elige el
-      switch. Se añade de nuevo la asignación dentro de cada caso del switch
-      para que no termine el programa hasta que no se elija la opción salir,
-      lo cual rompe la condición del while y sale del bucle*/
+    /*La variable men que almacena el valor que devuelve la funciÃ³n menÃº
+      se usa para elegir la constante que determinarÃ¡ el caso que elige el
+      switch. Se aÃ±ade de nuevo la asignaciÃ³n dentro de cada caso del switch
+      para que no termine el programa hasta que no se elija la opciÃ³n salir,
+      lo cual rompe la condiciÃ³n del while y sale del bucle*/
     while(men!=0){
         switch(men){
             case 1 :{
@@ -74,23 +74,28 @@ int main(void){
                 printf("%d!=%d\n",a,f);
                 men=menu();
             }
+            break;
+
             case 6:{
                 leeNumero(&a,&b);
                 s=suma(a,b);
-                printf("suma %d+%d=%d\n",a,b,s);
+                printf("\n");
+                printf("Suma: %d + %d = %d\n\n",a,b,s);
                 r=resta(a,b);
-                printf("resta %d-%d=%d\n",a,b,r);
+                printf("Resta: %d - %d = %d\n\n",a,b,r);
                 multiplicacion(a,b,&resultado);
-                printf("multiplicacion %d*%d=%f\n",a,b,resultado);
+                printf("Multiplicacion: %d * %d = %f\n\n",a,b,resultado);
                 d=division(a,b);
-                printf("division %d:%d=%f\n",a,b,d);
-                printf("Ingrese un valor:\n");
+                printf("Division: %d : %d = %f\n\n",a,b,d);
+                printf("Ingrese un valor para el factorial: ");
                 scanf("%d",&a);
                 f=factorial(a);
-                printf("%d!=%d\n",a,f);
+                printf("\n");
+                printf("Factorial: %d! = %d\n\n",a,f);
                 men=menu();
 
             }
+            break;
 
           default :
                 printf("Opcion incorrecta\n");
