@@ -3,7 +3,7 @@
 #include<stdio.h>
 #include<stdlib.h>
 #include<conio.h>
-#include "calculadoraagus.h"
+#include "Trabajo practico n1.h"
 
 /*Definición de funciones*/
 
